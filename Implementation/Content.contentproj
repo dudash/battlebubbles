@@ -1,0 +1,723 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{C581CAD4-0EF9-434B-A942-C0B8C84DB57E}</ProjectGuid>
+    <ProjectTypeGuids>{96E2B04D-8817-42c6-938A-82C39BA4D311};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjectA</RootNamespace>
+    <AssemblyName>ProjectA</AssemblyName>
+    <XnaFrameworkVersion>v3.0</XnaFrameworkVersion>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <OutputPath>bin\$(Platform)\$(Configuration)</OutputPath>
+    <ContentRootDirectory>.</ContentRootDirectory>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <XnaPlatform>Windows</XnaPlatform>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\Buttons\button_a.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>button_a</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\game_background.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>game_background</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\joinup_menu.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>joinup_menu_bkg</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\main_menu.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>main_menu_bkg</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\paused_menu.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>paused_menu_bkg</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\press_a_to_join.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>press_a_to_join</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\press_b_to_exit.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>press_b_to_exit</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\press_to_start.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>press_to_start</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\white_16x16.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>white_16x16</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Fonts\Arial 14.spritefont">
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Name>Arial 14</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\small_background.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>small_background</Name>
+    </Compile>
+    <Compile Include="W_A_D\Textures\white.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>white</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Shaders\shader_boardtest1.fx">
+      <Importer>EffectImporter</Importer>
+      <Processor>EffectProcessor</Processor>
+      <Name>shader_boardtest1</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\black.png">
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Name>black</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.EffectImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.FBXImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.TextureImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.XImporter, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Content.Pipeline.AudioImporters, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Audio\BattleBubbles.xap">
+      <Name>BattleBubbles</Name>
+      <Importer>XactImporter</Importer>
+      <Processor>XactProcessor</Processor>
+    </Compile>
+    <None Include="W_A_D\Boards\test_obstruction.lvl">
+      <Name>test_obstruction</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\testing.png">
+      <Name>testing</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\level_select_menu.png">
+      <Name>level_select_menu_bkg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\Buttons\trigger_left.png">
+      <Name>trigger_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\trigger_right.png">
+      <Name>trigger_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="W_A_D\Boards\TestingBoardsList.xml">
+      <Name>TestingBoardsList</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="W_A_D\Boards\BoardsList.xml">
+      <Name>BoardsList</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\build_in.lvl">
+      <Name>build_in</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\build_out.lvl">
+      <Name>build_out</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\multi_base.lvl">
+      <Name>multi_base</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\poping_wall_lanes.lvl">
+      <Name>poping_wall_lanes</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\qp_lefttoright.lvl">
+      <Name>qp_lefttoright</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\squeeze.lvl">
+      <Name>squeeze</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\test_playeronerules.lvl">
+      <Name>test_playeronerules</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="W_A_D\Fonts\Arial 10.spritefont">
+      <Name>Arial 10</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Fonts\Berlin San FB Demi 28.spritefont">
+      <Name>Berlin San FB Demi 28</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Fonts\Berlin San FB Demi 36.spritefont">
+      <Name>Berlin San FB Demi 36</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\build_in.png">
+      <Name>build_in</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\BoardThumbs\build_out.png">
+      <Name>build_out</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\squeeze.png">
+      <Name>squeeze</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\pop_lanes.png">
+      <Name>pop_lanes</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\Buttons\button_back.png">
+      <Name>button_back</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\Buttons\bumper_left.png">
+      <Name>bumper_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\bumper_right.png">
+      <Name>bumper_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\button_b.png">
+      <Name>button_b</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\button_start.png">
+      <Name>button_start</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\button_x.png">
+      <Name>button_x</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\button_y.png">
+      <Name>button_y</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\dpad_down.png">
+      <Name>dpad_down</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\dpad_left.png">
+      <Name>dpad_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\dpad_right.png">
+      <Name>dpad_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\dpad_up.png">
+      <Name>dpad_up</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\stick_left.png">
+      <Name>stick_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\Buttons\stick_right.png">
+      <Name>stick_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\gameover_menu.png">
+      <Name>gameover_menu_bkg</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\controls_screen.png">
+      <Name>controls_screen</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\multi_base.png">
+      <Name>multi_base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\PlayerPics\ape.png">
+      <Name>ape</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\bear.png">
+      <Name>bear</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\bride.png">
+      <Name>bride</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\clown.png">
+      <Name>clown</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\coon.png">
+      <Name>coon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\flower.png">
+      <Name>flower</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\frank.png">
+      <Name>frank</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\PlayerPics\pirate.png">
+      <Name>pirate</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\source_slot_vertical_SHEET.png">
+      <Name>source_slot_vertical_SHEET</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\bubble_popping_slot_vertical_SHEET.png">
+      <Name>bubble_popping_slot_vertical_SHEET</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\dead_slot_horizontal.png">
+      <Name>dead_slot_horizontal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\dead_slot_vertical.png">
+      <Name>dead_slot_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\hex_horizontal.png">
+      <Name>hex_horizontal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\hex_vertical.png">
+      <Name>hex_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\powerup_emissionfrenzy_vertical.png">
+      <Name>powerup_emissionfrenzy_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_fasttransition_vertical.png">
+      <Name>powerup_fasttransition_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_lockall_vertical.png">
+      <Name>powerup_lockall_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_popunlocked_vertical.png">
+      <Name>powerup_popunlocked_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_slowtransition_vertical.png">
+      <Name>powerup_slowtransition_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_slow_horizontal.png">
+      <Name>powerup_slow_horizontal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_slow_vertical.png">
+      <Name>powerup_slow_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\slot_horizontal.png">
+      <Name>slot_horizontal</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\slot_vertical.png">
+      <Name>slot_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\logomenu.png">
+      <Name>logomenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\suddendeath_menu.png">
+      <Name>suddendeath_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\transition_indicator_ring.png">
+      <Name>transition_indicator_ring</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\arrow_left.png">
+      <Name>arrow_left</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\arrow_right.png">
+      <Name>arrow_right</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\instructions_menu_1.png">
+      <Name>instructions_menu_1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\instructions_menu_2.png">
+      <Name>instructions_menu_2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\menus\instructions_menu_3.png">
+      <Name>instructions_menu_3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\powerup_fast_vertical.png">
+      <Name>powerup_fast_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\powerup_minus_indicator_ring.png">
+      <Name>powerup_minus_indicator_ring</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\powerup_plus_indicator_ring.png">
+      <Name>powerup_plus_indicator_ring</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\particles\star.png">
+      <Name>star</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\particles\white_star.png">
+      <Name>white_star</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\powerup_blocksteal_vertical.png">
+      <Name>powerup_blocksteal_vertical</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\xna.png">
+      <Name>xna</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\NoHandsLogoOnBlack.png">
+      <Name>NoHandsLogoOnBlack</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Audio\JelloKnee - Gorillas.mp3">
+      <Name>JelloKnee - Gorillas</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Audio\JelloKnee - RocketFunkster.mp3">
+      <Name>JelloKnee - RocketFunkster</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\qp_lefttoright.png">
+      <Name>qp_lefttoright</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\quitmenu.png">
+      <Name>quitmenu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="W_A_D\Boards\cave.lvl">
+      <Name>cave</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\deadend.lvl">
+      <Name>deadend</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\doublediamond.lvl">
+      <Name>doublediamond</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\empty.lvl">
+      <Name>empty</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\qp_thex.lvl">
+      <Name>qp_thex</Name>
+      <Importer>XmlImporter</Importer>
+      <Processor>PassThroughProcessor</Processor>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="W_A_D\Boards\stickycave.lvl">
+      <Name>stickycave</Name>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\qp_thex.png">
+      <Name>qp_thex</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\joinup_advanced_menu.png">
+      <Name>joinup_advanced_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\press_y_to_AI.png">
+      <Name>press_y_to_AI</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\hexbacking_1_menu.png">
+      <Name>hexbacking_1_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\custom.png">
+      <Name>custom</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\create_delete.png">
+      <Name>create_delete</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\leveleditcontrols.png">
+      <Name>leveleditcontrols</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\confirm_delete_menu.png">
+      <Name>confirm_delete_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\unsaved_changes_menu.png">
+      <Name>unsaved_changes_menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\menus\select_bar.png">
+      <Name>select_bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="W_A_D\Textures\BoardThumbs\cave.png">
+      <Name>cave</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\BoardThumbs\deadend.png">
+      <Name>deadend</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\BoardThumbs\doublediamond.png">
+      <Name>doublediamond</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="W_A_D\Textures\BoardThumbs\stickycave.png">
+      <Name>stickycave</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\v3.0\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
+</Project>

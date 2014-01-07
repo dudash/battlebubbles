@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual C# Express 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BattleBubbles_360", "BattleBubbles_360.csproj", "{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Xbox 360 = Debug|Xbox 360
+		Release|Xbox 360 = Release|Xbox 360
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
+		{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
+		{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
+		{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
+		{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}.Release|Xbox 360.Build.0 = Release|Xbox 360
+		{85D4C4E4-C741-4975-9FC5-FC2163BE4DF0}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
+		{C581CAD4-0EF9-434B-A942-C0B8C84DB57E}.Debug|Xbox 360.ActiveCfg = Debug|x86
+		{C581CAD4-0EF9-434B-A942-C0B8C84DB57E}.Release|Xbox 360.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

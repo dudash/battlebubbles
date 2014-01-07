@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BoardLevelList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   <BoardLevels>
+      <BoardLevelInfo>
+         <Name>Level 1 - Battle It In</Name>
+         <Filename>W_A_D\Boards\build_in.lvl</Filename>
+         <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\build_in</ThumbnailTextureName>
+         <Description>Build your base in toward the center</Description>
+         <Description2>-WIN RULES- Get to the center first</Description2>
+      </BoardLevelInfo>
+      <BoardLevelInfo>
+         <Name>Level 2 - Battle It Out</Name>
+         <Filename>W_A_D\Boards\build_out.lvl</Filename>
+         <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\build_out</ThumbnailTextureName>
+         <Description>Build your base out toward the corners</Description>
+         <Description2>-WIN RULES- Get to any corner first</Description2>
+      </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 3 - Multi-Base (LongPlay)</Name>
+       <Filename>W_A_D\Boards\multi_base.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\multi_base</ThumbnailTextureName>
+       <Description>A long game. Use strategy to trap your opponent's growth</Description>
+       <Description2>-WIN RULES- Have the most points when the board is full</Description2>
+     </BoardLevelInfo>
+      <BoardLevelInfo>
+         <Name>Level 4 - Sticky Blocks (LongPlay, Sticky)</Name>
+         <Filename>W_A_D\Boards\squeeze.lvl</Filename>
+         <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\squeeze</ThumbnailTextureName>
+         <Description>A long game where it's hard to move (especially for the AI)</Description>
+         <Description2>-WIN RULES- Have the most points when the board is full</Description2>
+      </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 5 - The Cave (LongPlay)</Name>
+       <Filename>W_A_D\Boards\cave.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\cave</ThumbnailTextureName>
+       <Description>Mind your strategy</Description>
+       <Description2>-WIN RULES- Have the most points when the board is full</Description2>
+     </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 6 - The Sticky Cave (LongPlay, Sticky)</Name>
+       <Filename>W_A_D\Boards\stickycave.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\stickycave</ThumbnailTextureName>
+       <Description>Mind your strategy and the sticky blocks!</Description>
+       <Description2>-WIN RULES- Have the most points when the board is full</Description2>
+     </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 7 - Dead End (QuickPlay)</Name>
+       <Filename>W_A_D\Boards\deadend.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\deadend</ThumbnailTextureName>
+       <Description>A quick game.  Build to the left</Description>
+       <Description2>-WIN RULES- Get to the left first</Description2>
+     </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 8 - Gauntlet (QuickPlay)</Name>
+       <Filename>W_A_D\Boards\qp_lefttoright.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\qp_lefttoright</ThumbnailTextureName>
+       <Description>A quick game.  Build left to right</Description>
+       <Description2>-WIN RULES- Get to the right first</Description2>
+     </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 9 -The X (QuickPlay)</Name>
+       <Filename>W_A_D\Boards\qp_thex.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\qp_thex</ThumbnailTextureName>
+       <Description>A quick game.  Build toward the center</Description>
+       <Description2>-WIN RULES- Get to the center first</Description2>
+     </BoardLevelInfo>
+     <BoardLevelInfo>
+       <Name>Level 10 - Double Diamond (QuickPlay)</Name>
+       <Filename>W_A_D\Boards\doublediamond.lvl</Filename>
+       <ThumbnailTextureName>W_A_D\Textures\BoardThumbs\doublediamond</ThumbnailTextureName>
+       <Description>A quick game.  Build toward the bottom</Description>
+       <Description2>-WIN RULES- Get to the bottom first</Description2>
+     </BoardLevelInfo>
+   </BoardLevels>
+</BoardLevelList>

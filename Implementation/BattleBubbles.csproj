@@ -1,0 +1,359 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <ProjectGuid>{5E02B98A-3603-433B-AA39-783BF1630A19}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HBBB</RootNamespace>
+    <AssemblyName>HBBB</AssemblyName>
+    <XnaFrameworkVersion>v3.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <XnaCrossPlatformGroupID>{ccb41eb4-9230-4279-84d1-3f771f69a226}</XnaCrossPlatformGroupID>
+    <XnaUpgrade>1</XnaUpgrade>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>TRACE;DEBUG;DRAW_DEBUG_JUNK_OFF DRAW_DEBUG_BOARD_OFF;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE%3bWINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>True</XnaCompressContent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=3.0.0.0, Culture=neutral, PublicKeyToken=6d5c3888ef60e27d" />
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Math\Random.cs">
+      <Name>Random</Name>
+    </Compile>
+    <Compile Include="Core\Math\RandomException.cs">
+      <Name>RandomException</Name>
+    </Compile>
+    <Compile Include="Core\MassSpring\Verlet\RigidConstraint.cs">
+      <Name>RigidConstraint</Name>
+    </Compile>
+    <Compile Include="Core\MassSpring\Verlet\SemiRigidConstraint.cs">
+      <Name>SemiRigidConstraint</Name>
+    </Compile>
+    <Compile Include="Core\MassSpring\Verlet\IVerletConstraint.cs">
+      <Name>IVerletConstraint</Name>
+    </Compile>
+    <Compile Include="Core\MassSpring\Verlet\VerletPoint.cs">
+      <Name>VerletPoint</Name>
+    </Compile>
+    <Compile Include="Core\MassSpring\Verlet\VerletSystem.cs">
+      <Name>VerletSystem</Name>
+    </Compile>
+    <Compile Include="Core\Menus\BaseMenu.cs">
+      <Name>BaseMenu</Name>
+    </Compile>
+    <Compile Include="Core\Entity2D.cs">
+      <Name>Entity2D</Name>
+    </Compile>
+    <Compile Include="Core\Exception.cs">
+      <Name>Exception</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\Slot.cs">
+      <Name>Slot</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\Board.cs">
+      <Name>Board</Name>
+    </Compile>
+    <Compile Include="GameComponents\GameSession.cs">
+      <Name>GameSession</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\Block.cs">
+      <Name>Block</Name>
+    </Compile>
+    <Compile Include="Core\Menus\IMenu.cs">
+      <Name>IMenu</Name>
+    </Compile>
+    <Compile Include="GameComponents\Menus\GameOverMenu.cs">
+      <Name>GameOverMenu</Name>
+    </Compile>
+    <Compile Include="GameComponents\Menus\JoinUpMenu.cs">
+      <Name>JoinUpMenu</Name>
+    </Compile>
+    <Compile Include="GameComponents\Menus\MainMenu.cs">
+      <Name>MainMenu</Name>
+    </Compile>
+    <Compile Include="Core\Menus\BaseMenuSystem.cs">
+      <Name>BaseMenuSystem</Name>
+    </Compile>
+    <Compile Include="GameComponents\Menus\MenuSystem.cs">
+      <Name>MenuSystem</Name>
+    </Compile>
+    <Compile Include="GameComponents\Menus\OptionsMenu.cs">
+      <Name>OptionsMenu</Name>
+    </Compile>
+    <Compile Include="GameComponents\Menus\PauseMenu.cs">
+      <Name>PauseMenu</Name>
+    </Compile>
+    <Compile Include="GameComponents\PlayerComponents\Player.cs">
+      <Name>Player</Name>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <Name>AssemblyInfo</Name>
+    </Compile>
+    <Compile Include="Program.cs">
+      <Name>Program</Name>
+    </Compile>
+    <Compile Include="HBBBGame.cs">
+      <Name>ProjectAGame</Name>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Game.ico">
+      <Name>Game</Name>
+    </Content>
+    <Content Include="GameThumbnail.png">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Graphics\AnimatedTexture2D.cs" />
+    <Compile Include="Core\Graphics\ColorSetHelper.cs">
+      <Name>ColorSetHelper</Name>
+    </Compile>
+    <Compile Include="Core\Graphics\PrimitiveBatch.cs">
+      <Name>PrimitiveBatch</Name>
+    </Compile>
+    <Compile Include="Core\Graphics\SplashScreen.cs" />
+    <Compile Include="Core\Input\GamePadAnalogEventDetails.cs" />
+    <Compile Include="Core\Input\GamePadButtonEventDetails.cs" />
+    <Compile Include="Core\Input\GamePadEventDetails.cs" />
+    <Compile Include="Core\Input\GamePadsWrapper.cs" />
+    <Compile Include="Core\Input\GamePadWrapper.cs" />
+    <Compile Include="Core\MassSpring\Verlet\DynamicConstraint.cs">
+      <Name>DynamicConstraint</Name>
+    </Compile>
+    <Compile Include="Core\Math\CollisionDetective.cs">
+      <Name>CollisionDetective</Name>
+    </Compile>
+    <Compile Include="Core\Particle2D\Emitter.cs" />
+    <Compile Include="Core\Particle2D\GunEmitter.cs" />
+    <Compile Include="Core\Particle2D\Modifier.cs" />
+    <Compile Include="Core\Particle2D\Particle.cs" />
+    <Compile Include="Core\Particle2D\ParticleSystem.cs" />
+    <Compile Include="Core\Particle2D\RadialEmitter.cs" />
+    <Compile Include="Core\Particle2D\RandomEmitter.cs" />
+    <Compile Include="GameComponents\BoardComponents\IBoardEntity.cs" />
+    <Compile Include="GameComponents\BoardComponents\IntPlayerIndexPair.cs" />
+    <Compile Include="GameComponents\BoardComponents\Obstruction.cs">
+      <Name>Obstruction</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\BoardLevel.cs">
+      <Name>BoardLevel</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\ObstructionCircle.cs">
+      <Name>ObstructionCircle</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\ObstructionLattice.cs" />
+    <Compile Include="GameComponents\BoardComponents\ObstructionRectangle.cs">
+      <Name>ObstructionRectangle</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\SlotOrientation.cs">
+      <Name>SlotOrientation</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\Tessellation.cs">
+      <Name>Tessellation</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\VerletPointToBoardCollision.cs">
+      <Name>VerletPointToBoardCollision</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\VerletLineToBoardCollision.cs">
+      <Name>VerletLineToBoardCollision</Name>
+    </Compile>
+    <Compile Include="GameComponents\Globals\GameAudio.cs" />
+    <Compile Include="GameComponents\Globals\GlobalFlags.cs" />
+    <Compile Include="GameComponents\Globals\GlobalResorces.cs" />
+    <Compile Include="GameComponents\Globals\GlobalStrings.cs" />
+    <Compile Include="GameComponents\HUD\BoostMeter.cs" />
+    <Compile Include="GameComponents\HUD\Clock.cs" />
+    <Compile Include="GameComponents\HUD\DefendingIndicator.cs" />
+    <Compile Include="GameComponents\HUD\IHUDComponent.cs" />
+    <Compile Include="GameComponents\HUD\PlayerBox.cs" />
+    <Compile Include="GameComponents\HUD\PowerUpIndicator.cs" />
+    <Compile Include="GameComponents\HUD\TransitionIndicator.cs" />
+    <Compile Include="GameComponents\LevelBuilder\CustomLevelsMenu.cs" />
+    <Compile Include="GameComponents\LevelBuilder\EditLevelMenu.cs" />
+    <Compile Include="GameComponents\LevelBuilder\LevelBuilderBoard.cs" />
+    <Compile Include="GameComponents\Menus\BoardLevelList.cs" />
+    <Compile Include="GameComponents\Menus\CreditsMenu.cs" />
+    <Compile Include="GameComponents\Menus\JoinUpAdvancedMenu.cs" />
+    <Compile Include="GameComponents\Menus\LevelSelectionMenu.cs" />
+    <Compile Include="GameComponents\Menus\Options2Menu.cs" />
+    <Compile Include="GameComponents\Menus\Options3Menu.cs" />
+    <Compile Include="GameComponents\Menus\QuitMenu.cs" />
+    <Compile Include="GameComponents\Menus\ShowControlsMenu.cs" />
+    <Compile Include="GameComponents\Menus\SuddenDeathMenu.cs" />
+    <Compile Include="GameComponents\Menus\TitleMenu.cs" />
+    <Compile Include="GameComponents\PlayerComponents\Bubble.cs">
+      <Name>Bubble</Name>
+    </Compile>
+    <Compile Include="GameComponents\BoardComponents\VerletPointToPlayZoneCollision.cs">
+      <Name>VerletPointToPlayZoneCollision</Name>
+    </Compile>
+    <Compile Include="GameComponents\GameStats.cs">
+      <Name>GameStats</Name>
+    </Compile>
+    <Compile Include="Core\EntityManager.cs" />
+    <Compile Include="GameComponents\PlayerComponents\IBubblePayload.cs">
+      <Name>IBubblePayload</Name>
+    </Compile>
+    <Compile Include="GameComponents\PlayerComponents\IPlayerInputHandler.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIBear.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIBride.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIClown.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIFrank.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIGonz\Behavior.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIGonz\BlockTransportingBehavior.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIGonz\ExpandTheBaseBehavior.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIGonz\MovementController.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIGonz\PlayerAIGonz.cs" />
+    <Compile Include="GameComponents\PlayerComponents\PlayerAIHandler.cs">
+      <Name>PlayerAIHandler</Name>
+    </Compile>
+    <Compile Include="GameComponents\PlayerComponents\PlayerInputHandler.cs">
+      <Name>PlayerInputHandler</Name>
+    </Compile>
+    <Compile Include="GameComponents\PlayerComponents\PlayerStats.cs">
+      <Name>PlayerStats</Name>
+    </Compile>
+    <Compile Include="GameComponents\PowerUps\BlockStealPowerUp.cs" />
+    <Compile Include="GameComponents\PowerUps\EmissionFrenzyPowerUp.cs" />
+    <Compile Include="GameComponents\PowerUps\FastSpeedPowerUp.cs" />
+    <Compile Include="GameComponents\PowerUps\FastTransitionPowerUp.cs" />
+    <Compile Include="GameComponents\PowerUps\LockAllPowerUp.cs" />
+    <Compile Include="GameComponents\PowerUps\PopUnlockedPowerUp.cs" />
+    <Compile Include="GameComponents\PowerUps\PowerUp.cs">
+      <Name>PowerUp</Name>
+    </Compile>
+    <Compile Include="GameComponents\PowerUps\PowerUpFactory.cs">
+      <Name>PowerUpFactory</Name>
+    </Compile>
+    <Compile Include="GameComponents\PowerUps\PowerUpSet.cs">
+      <Name>PowerUpSet</Name>
+    </Compile>
+    <Compile Include="GameComponents\PowerUps\SlowSpeedPowerUp.cs">
+      <Name>SlowSpeedPowerUp</Name>
+    </Compile>
+    <Compile Include="GameComponents\PowerUps\SlowTransitionPowerUp.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <NestedContentProject Include="Content.contentproj">
+      <Project>{c581cad4-0ef9-434b-a942-c0b8c84db57e}</Project>
+      <Visible>False</Visible>
+    </NestedContentProject>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Xna.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft XNA Framework Redistributable 3.0</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="GameComponents\Debugging\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" Condition="" />
+</Project>
