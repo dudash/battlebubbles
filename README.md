@@ -30,6 +30,3 @@ Finally, if you would like to use the code for something outside the GPLv3 licen
 
 Thanks for reading this,
 Jason
- http://www.nohandsgames.com
- (thenut77@gmail.com)
- (jason@nohandsgames.com)
