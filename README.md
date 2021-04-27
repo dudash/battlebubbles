@@ -3,7 +3,8 @@ battlebubbles
 
 The Xbox 360 indie game "Battle Bubbles (Four Corners)"
 
-![Screenshot](http://img.gamefaqs.net/screens/7/3/f/gfs_121567_2_1.jpg)
+![Screenshot](https://raw.githubusercontent.com/dudash/battlebubbles/de29dd81b459d58dd9284cc66857a3a0c866dc9d/Screenshots/bb110192_front.jpg)
+![Video](https://www.youtube.com/watch?v=LQ0eHce4YzA)
 
 I'm releasing Battle Bubbles as open source under the terms of the GNU GPLv3.  I'm hoping that the code will be useful to some new game developers.
 
